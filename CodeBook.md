@@ -1,0 +1,51 @@
+This is a code book that describes the variables, the data, and any transformations or work that you performed to clean up the data.
+
+The data source
+Original data: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+Original description of the dataset: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+Data Set Information
+The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist.  
+From each window, a vector of features was obtained by calculating variables from the time and frequency domain.description in features.txt.
+
+The data
+The dataset includes the following files:
+
+'README.txt'
+
+'features_info.txt': Shows information about the variables used on the feature vector.
+
+'features.txt': List of all features.
+
+'activity_labels.txt': Links the class labels with their activity name.
+
+'train/X_train.txt': Training set.
+
+'train/y_train.txt': Training labels.
+
+'test/X_test.txt': Test set.
+
+'test/y_test.txt': Test labels.
+
+subject_test/subject_train :  Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30.
+
+Transformation details
+There are 5 parts:
+
+Merges the training and the test sets to create one data set.
+Extracts only the measurements on the mean and standard deviation for each measurement.
+Uses descriptive activity names to name the activities in the data set
+Appropriately labels the data set with descriptive activity names.
+Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+How to run run_analysis.R
+
+Require reshape2 library
+load the train and test data sets along with subject_test and subjest_train and features.txt
+rename the names of the coloumns in the test and train x with the labeks given in features.txt
+name the coloumns in subject files.
+using cbind and rbind merge all the 6 files to get a merged data set.
+Extract the mean and standard deviation column names and data.
+make the data tidy by using reshape package
+
+
